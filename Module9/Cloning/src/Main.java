@@ -11,7 +11,7 @@ public class Main {
             System.out.println("Введите путь куда копировать: ");
             String pathToDest = in.nextLine();
             if (CopyDir.copyDir(pathToSource, pathToDest)) {
-                System.out.println("Копирование завершено успешно!");
+                System.out.println("Копирование завершено успешно!!!");
             }else{
                 System.out.println("Ошибка копирования!");
             }
