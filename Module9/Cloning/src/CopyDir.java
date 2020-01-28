@@ -20,8 +20,8 @@ public class CopyDir{
                 }else{
                     copyFile(nextSrcFileName, nextDstFileName);
                 }
-                return true;
             }
+            return true;
         }{
             System.out.println("Введенный каталог уже существет, попробуйте снова!");
             return false;
