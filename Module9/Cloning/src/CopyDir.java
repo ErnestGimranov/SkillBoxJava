@@ -9,9 +9,13 @@ public class CopyDir{
         File dstFile = new File(destDirName);
         if(srcFile.exists() && srcFile.isDirectory() && !dstFile.exists()){
             dstFile.mkdir();
+            String[] destArray = destDirName.split("/");
             File nextSrcFile;
             String nextSrcFileName, nextDstFileName;
             for(String fileName : srcFile.list()){
+                if (fileName.equals(destArray[destArray.length - 1])){
+                    break;
+                }
                 nextSrcFileName = srcFile.getAbsolutePath() + File.separator + fileName;
                 nextDstFileName = dstFile.getAbsolutePath() + File.separator + fileName;
                 nextSrcFile = new File(nextSrcFileName);
