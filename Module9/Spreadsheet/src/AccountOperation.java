@@ -4,37 +4,27 @@ import java.util.TreeMap;
 
 public class AccountOperation {
     private String description;
-    private float transaction;
+    private Long transaction;
     private OperationType type;
 
-    public AccountOperation(String description, OperationType type, float transaction){
-            this.transaction = transaction;
+    public AccountOperation(String description, OperationType type, Float transaction){
+            this.transaction = transaction.longValue();
             this.description = description;
             this.type = type;
     }
 
-    public static int incomeSum(ArrayList<AccountOperation> operationsList) {
-        int sum = 0;
-        for(AccountOperation operation : operationsList){
-            if (operation.type == OperationType.INCOME){
-                sum += operation.transaction;
-            }
-        }
-        return sum;
+    public static void printIncomeSum(ArrayList<AccountOperation> operationsList) {
+        long sum = operationsList.stream().filter(o -> o.type == OperationType.INCOME).map(o -> o.transaction).reduce((t1, t2) -> t1 + t2).get();
+        System.out.println("Сумма Приходов состовляет: " + sum / 100 + "." + sum % 100);
     }
 
-    public static int costSum(ArrayList<AccountOperation> operationsList){
-        int sum = 0;
-        for(AccountOperation operation : operationsList){
-            if (operation.type == OperationType.COST){
-                sum += operation.transaction;
-            }
-        }
-        return sum;
+    public static void printCostSum(ArrayList<AccountOperation> operationsList){
+        long sum = operationsList.stream().filter(o -> o.type == OperationType.COST).map(o -> o.transaction).reduce((t1, t2) -> t1 + t2).get();
+        System.out.println("Сумма Расходов состовляет: " + sum / 100 + "." + sum % 100);
     }
 
-    public static TreeMap<String, Float> getMapOfTrasactions(ArrayList<AccountOperation> operations){
-        TreeMap<String, Float> descrptionsMap = new TreeMap<>();
+    public static TreeMap<String, Long> getMapOfTrasactions(ArrayList<AccountOperation> operations){
+        TreeMap<String, Long> descrptionsMap = new TreeMap<>();
         for (AccountOperation operation : operations){
             if (!descrptionsMap.containsKey(operation.description) && operation.type == OperationType.COST){
                 descrptionsMap.put(operation.description, operation.transaction);
@@ -45,9 +35,9 @@ public class AccountOperation {
         return descrptionsMap;
     }
 
-    public static void printMap(Map<String, Float> map) {
+    public static void printMap(Map<String, Long> map) {
         for(String key : map.keySet()){
-            System.out.println("Descrption: " + key + " RUB: " + map.get(key));
+            System.out.println("Descrption: " + key + " RUB: " + map.get(key) / 100 + "." + map.get(key) % 100);
         }
     }
 
