@@ -11,6 +11,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class Main {
+    private static final int INDEX_HTTPS = 0;
     public static void main(String[] args) {
         String lentaFile = parseFile("data/lenta.html");
         Document doc = Jsoup.parse(lentaFile);
@@ -20,7 +21,7 @@ public class Main {
                 .forEach(
                     s -> {
                         try {
-                            if (s.split("/")[0].equals("https:")) {
+                            if (s.split("/")[INDEX_HTTPS].equals("https:")) {
                                 downloadFile(s);
                             } else {
                                 downloadFile("https:" + s);
