@@ -5,9 +5,7 @@ import org.jsoup.select.Elements;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.URL;
-import java.net.URLConnection;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -17,9 +15,21 @@ public class Main {
         String lentaFile = parseFile("data/lenta.html");
         Document doc = Jsoup.parse(lentaFile);
         Elements elements = doc.select("img");
-        elements.forEach(element -> {
-            element.attributes().get("src").;
-        });
+        elements.stream()
+                .map(element -> element.attributes().get("src"))
+                .forEach(
+                    s -> {
+                        try {
+                            if (s.split("/")[0].equals("https:")) {
+                                downloadFile(s);
+                            } else {
+                                downloadFile("https:" + s);
+                            }
+                        }catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                );
     }
 
     public static String parseFile(String path){
@@ -37,15 +47,10 @@ public class Main {
 
     public static void downloadFile(String path) throws IOException {
         URL url = new URL(path);
-        URLConnection connection = url.openConnection(); //устанавливаем соединение
 
-//получаем OutputStream, чтобы писать в него данные запроса
-        OutputStream outputStream = connection.getOutputStream();
-        outputStream.write(1);
-        outputStream.flush();
+        InputStream inputStream = url.openStream();
+        Files.copy(inputStream, new File("data/img/" + path.split("/")[path.split("/").length - 1]).toPath());
 
-//получаем InputStream, чтобы читать из него данные ответа
-        InputStream inputStream = connection.getInputStream();
-        Files.copy(inputStream, new File("data/" + path.split("/")[path.split("/").length - 1]).toPath());
+        inputStream.close();
     }
 }
