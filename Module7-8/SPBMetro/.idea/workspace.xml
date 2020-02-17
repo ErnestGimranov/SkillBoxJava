@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e32b09b1-11a7-4f0f-842a-3f7c42ddd516" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="e32b09b1-11a7-4f0f-842a-3f7c42ddd516" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPBMetro — Markers/.idea/SPBMetro — Markers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPBMetro — Markers/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SPBMetro — Markers/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPBMetro — Markers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SPBMetro — Markers/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module9/HTMLParser/data/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module9/JSONParser/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module9/JSONParser/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module9/JSONParser/src/main/java/JSONConnectionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module9/JSONParser/src/main/java/JSONConnectionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module9/JSONParser/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module9/JSONParser/src/main/java/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,26 +33,24 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1UhffDFO9rnMTpBDzBIK4qWtDHJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="spb-metro" />
+      <module name="SPBMetro" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,6 +104,44 @@
       <updated>1575813848372</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="316" y="65" key="#Main" timestamp="1580985430260">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="316" y="65" key="#Main.java" timestamp="1580985504820">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="316" y="65" key="#Main.java/0.0.1280.800@0.0.1280.800" timestamp="1580985504820" />
+    <state x="316" y="65" key="#Main/0.0.1280.800@0.0.1280.800" timestamp="1580985430260" />
+    <state x="119" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580985377321">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="119" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1580985377321" />
+    <state x="392" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1580985440585">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="392" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.800@0.0.1280.800" timestamp="1580985440585" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1581600299736">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1581600299736" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1581600299734">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1581600299734" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1581600299733">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1581600299733" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1581600299735">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1581600299735" />
+    <state x="17" y="22" key="new project wizard" timestamp="1581330601334">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="17" y="22" key="new project wizard/0.0.1280.800@0.0.1280.800" timestamp="1581330601334" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/spb_metro$All_in_spb_metro.ic" NAME="All in spb-metro Coverage Results" MODIFIED="1578997216996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -13,9 +13,7 @@ import java.util.List;
 
 public class Main {
     public static JSONObject mskMetroJson = new JSONObject();
-//    public static JSONObject mskStations = new JSONObject();
     public static String pathToJSON = "data/msk.json";
-    public static String REGEX_FOR_CONNECTION_NAME = "D+\\s+";
 
     public static void main(String[] args) {
 
