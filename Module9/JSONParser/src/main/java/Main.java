@@ -1,4 +1,5 @@
 
+import com.google.gson.GsonBuilder;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -12,18 +13,24 @@ import java.util.List;
 
 public class Main {
     public static JSONObject mskMetroJson = new JSONObject();
-    public static JSONObject mskStations = new JSONObject();
+//    public static JSONObject mskStations = new JSONObject();
     public static String pathToJSON = "data/msk.json";
+    public static String REGEX_FOR_CONNECTION_NAME = "D+\\s+";
 
     public static void main(String[] args) {
 
         String wikiFile = parseFile("data/wiki.html");
         Document wikiDoc = Jsoup.parse(wikiFile);
+
         mskMetroJson.put("stations", JSONStationParser.mkStationsInJSON(wikiDoc));
         mskMetroJson.put("lines", JSONLinesParser.mkLinesInJSON(wikiDoc));
+        mskMetroJson.put("connections", JSONConnectionParser.mkConnectionsJSON(wikiDoc));
+        String json =
+                new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().
+                        create().toJson(mskMetroJson);
         try{
             FileWriter file = new FileWriter(pathToJSON);
-            file.write(mskMetroJson.toJSONString().replace(",", ",\n"));
+            file.write(json);
             file.flush();
             file.close();
         } catch (Exception ex){
