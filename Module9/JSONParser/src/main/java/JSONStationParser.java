@@ -9,12 +9,12 @@ public class JSONStationParser {
     public static final int SPAN_FOR_LINE = 0;
     public static final int SPAN_FOR_SECOND_LINE_NMB = 2;
     public static final int A_FOR_STATION = 0;
-    public static final String LINE_8A = "8А";
-    public static final String LINE_11 = "11";
+//    public static final String LINE_8A = "8А";
+//    public static final String LINE_11 = "11";
 
     public static JSONObject mskStations = new JSONObject();
 
-    public static JSONObject mkStationsInJSON(Document wikiDoc){
+    public static JSONObject mkStationsInJSON(Document wikiDoc, String[] specailLines){
         JSONArray stationLineTmp = new JSONArray();
         JSONArray stationLine8a = new JSONArray();
         JSONArray stationLine11 = new JSONArray();
@@ -47,11 +47,8 @@ public class JSONStationParser {
                         .eq(TD_FOR_LINE)
                         .select("span")
                         .eq(SPAN_FOR_SECOND_LINE_NMB).text();
-                if (secondLineNmb.equals(LINE_8A)){
-                    stationLine8a.add(stationName);
-                }
 
-                if (secondLineNmb.equals(LINE_11)){
+                if (secondLineNmb.equals(specailLines[1])){
                     stationLine11.add(stationName);
                 }
             }
@@ -65,11 +62,11 @@ public class JSONStationParser {
                     .select("span")
                     .eq(SPAN_FOR_LINE).text();
 
-            if (lineNmb.equals(LINE_8A)){
+            if (lineNmb.equals(specailLines[0])){
                 stationLine8a.add(stationName);
             }
 
-            if (lineNmb.equals(LINE_8A)){
+            if (lineNmb.equals(specailLines[1])){
                 stationLine11.add(stationName);
             }
 
@@ -84,8 +81,8 @@ public class JSONStationParser {
             }
         }
 
-        mskStations.put(LINE_11, stationLine11.clone());
-        mskStations.put(LINE_8A, stationLine8a.clone());
+        mskStations.put(specailLines[1], stationLine11.clone());
+        mskStations.put(specailLines[0], stationLine8a.clone());
         return mskStations;
     }
 }
